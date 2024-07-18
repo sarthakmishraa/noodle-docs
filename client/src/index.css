@@ -1,0 +1,85 @@
+body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+button {
+    padding: 5px;
+    font-weight: lighter;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: #fefffe;
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+.Navbar {
+    padding: 10px;
+    background-color: #edf2fa;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main {
+    background-color: #fefffe;
+}
+
+.editorArea {
+    border-top: 2px solid lightblue;
+    height: 720px;
+    width: 100%;
+    height: 720px;
+    /* overflow-y: auto; */
+    margin-top: 10px;
+}
+
+.editorTools {
+    text-align: center;
+    background-color: #edf2fa;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.editorTools button {
+    font-weight: bold;
+}
+
+.editorArea .ProseMirror {
+    height: 100%;
+    outline: none;
+}
+
+.homeBtn {
+    background-color: #edf2fa;
+    border: 2px solid lightblue;
+}
+
+@media screen and (min-width: 1080px) {
+    .editorAreaText {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+    .editorAreaText {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .editorAreaText {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
