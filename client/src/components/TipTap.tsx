@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
@@ -8,7 +6,7 @@ import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import { io } from "socket.io-client";
 
-const url = "http://localhost:3000";
+const url = "https://noodledocs.onrender.com";
 const socket = io(url as string);
 
 export const TipTap = (props: any) => {
@@ -34,22 +32,18 @@ export const TipTap = (props: any) => {
         onUpdate() {
             const content = editor?.getHTML();
             setTextContent(content);
-            textUpdate(content as string);
-            console.log("update() editor executed");
+            textUpdate(textContent as string);
         }
     });
 
     const textUpdate = (content: string) => {
-        console.log("inside text update");
         socket.emit("text update", {docId, textContent: content});
-        console.log("text update fired");
     };
 
     useEffect(() => {
         socket.on("text updated", (data) => {
             if (docId === data.docId && data.textContent !== editor?.getHTML()) {
                 setTextContent(data.textContent);
-                console.log("editor content updated");
                 editor?.commands.setContent(data.textContent);
             }
         });

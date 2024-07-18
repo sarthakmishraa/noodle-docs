@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "*",
         methods: ["GET", "POST"]
     }
 });
@@ -23,7 +23,6 @@ io.on("connection", (socket) => {
     
     socket.on("text update", (data) => {
         socket.broadcast.emit("text updated", data);
-        console.log("inside BE and text update emitted");
     })
 });
 
