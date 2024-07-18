@@ -7,7 +7,7 @@ const PORT = 3000;
 
 const app = express();
 
-app.use(cors);
+app.use(cors());
 
 const server = http.createServer(app);
 
@@ -29,6 +29,10 @@ io.on("connection", (socket) => {
 io.on("disconnect", (socket) => {
     console.log(`User with id: ${socket.id} disconnected`);
 });
+
+app.get("/", (req, res) => {
+    res.send("<h2>Noodle Docs Backend is up</h2>");
+})
 
 server.listen(PORT, err => {
     if (err) throw err;
