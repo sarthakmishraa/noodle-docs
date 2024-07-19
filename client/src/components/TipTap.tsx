@@ -5,8 +5,8 @@ import Placeholder from "@tiptap/extension-placeholder";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import { io } from "socket.io-client";
-// "https://noodledocs.onrender.com"
-const url = "http://localhost:3000";
+
+const url = "https://noodledocs.onrender.com";
 const socket = io(url as string);
 
 export const TipTap = (props: any) => {
