@@ -5,12 +5,15 @@ import Placeholder from "@tiptap/extension-placeholder";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import { io } from "socket.io-client";
-
-const url = "https://noodledocs.onrender.com";
+// "https://noodledocs.onrender.com"
+const url = "http://localhost:3000";
 const socket = io(url as string);
 
 export const TipTap = (props: any) => {
     const [textContent, setTextContent] = useState<string | undefined>();
+    if(!textContent) {
+        console.log();
+    }
 
     const { docId } = props;
 
@@ -32,7 +35,7 @@ export const TipTap = (props: any) => {
         onUpdate() {
             const content = editor?.getHTML();
             setTextContent(content);
-            textUpdate(textContent as string);
+            textUpdate(content as string);
         }
     });
 

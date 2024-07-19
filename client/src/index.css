@@ -58,9 +58,36 @@ button:active {
     outline: none;
 }
 
+.home{
+    text-align: center;
+}
+
 .homeBtn {
     background-color: #edf2fa;
     border: 2px solid lightblue;
+}
+
+.homeForm label{
+    margin-right: 8px;
+}
+
+.homeForm input{
+    margin-right: 8px;
+    padding: 4px;
+}
+
+.about {
+    text-align: center;
+}
+
+.aboutProfilePic {
+    width: 200px;
+    height: 200px;
+    background-image: url('../public/profile-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 20px auto; /* Center the circle */
 }
 
 @media screen and (min-width: 1080px) {
