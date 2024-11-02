@@ -68,6 +68,12 @@ button:active {
     text-align: center;
 }
 
+.homeHeading {
+    line-height: 1.1;
+    font-size: 5rem;
+    letter-spacing: -5px;
+}
+
 .homeBtn {
     background-color: #edf2fa;
     border: 2px solid lightblue;

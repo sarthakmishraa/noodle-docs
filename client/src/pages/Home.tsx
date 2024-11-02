@@ -18,7 +18,7 @@ export const Home = () => {
     }
     return(
         <div className="home">
-            <h2>Noodle Docs</h2>
+            <h2 className="homeHeading">Noodle Docs</h2>
             <button className="homeBtn" onClick={goToNewDoc} >Create a new Noodle Doc</button>
             <p>OR</p>
             <div className="homeForm">
