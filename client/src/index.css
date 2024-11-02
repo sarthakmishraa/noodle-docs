@@ -68,10 +68,16 @@ button:active {
     text-align: center;
 }
 
+.homeHeadingContainer {
+    margin-bottom: 60px;
+}
+
 .homeHeading {
-    line-height: 1.1;
     font-size: 5rem;
     letter-spacing: -5px;
+}
+
+.homeHeadingText {
 }
 
 .homeBtn {
@@ -106,6 +112,10 @@ button:active {
     .editorAreaText {
         padding-left: 200px;
         padding-right: 200px;
+    }
+    .homeHeadingContainer {
+        padding-left: 400px;
+        padding-right: 400px;
     }
 }
 

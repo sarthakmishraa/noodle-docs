@@ -18,7 +18,10 @@ export const Home = () => {
     }
     return(
         <div className="home">
-            <h2 className="homeHeading">Noodle Docs</h2>
+            <div className="homeHeadingContainer">
+                <h2 className="homeHeading">Noodle Docs</h2>
+                <p className="homeHeadingText">Create stunning documents with our intuitive editor & Share your documents with colleagues, clients, or friends with just a few clicks.</p>
+            </div>
             <button className="homeBtn" onClick={goToNewDoc} >Create a new Noodle Doc</button>
             <p>OR</p>
             <div className="homeForm">
